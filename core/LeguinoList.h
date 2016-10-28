@@ -1,5 +1,5 @@
-#ifndef __LEGUINO_LIST_H
-#define __LEGUINO_LIST_H
+#ifndef __LIGHT_LIST_H
+#define __LIGHT_LIST_H
 
 
 #include "LeguinoPanic.h"

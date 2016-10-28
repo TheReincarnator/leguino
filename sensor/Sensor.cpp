@@ -1,0 +1,7 @@
+Sensor::Sensor()
+{
+}
+
+Sensor::~Sensor()
+{
+}

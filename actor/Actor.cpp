@@ -1,0 +1,7 @@
+Actor::Actor()
+{
+}
+
+Actor::~Actor()
+{
+}

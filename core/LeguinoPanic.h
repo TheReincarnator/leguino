@@ -1,5 +1,5 @@
-#ifndef __LEGUINO_PANIC_H
-#define __LEGUINO_PANIC_H
+#ifndef __LIGHT_PANIC_H
+#define __LIGHT_PANIC_H
 
 
 inline void panic()
