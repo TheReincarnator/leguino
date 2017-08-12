@@ -20,10 +20,10 @@ Aber er hatte Interesse daran.
 
 Also dachte ich mir: Versuchen wir mal die Lücke zu schließen und eine Open-Source-Plattform zu gründen, die auf LEGO®-Technic basiert, kostengünstig ist (Ziel <100€) und leicht verständlich. Hierfür schien Arduino bestens geeignet, aus folgenden Gründen:
 
-	* Ein Arduino Nano kostet unter 20€, teilweise sogar unter 10€
-	* Er lässt sich mit der LEGO®-Technic-Batterie betreiben
-	* Er startet (im Gegensatz z.B. zum Raspberry Pi) in unter einer Sekunde, ein Umstand, der in Modellen mit einschaltbarer Batterie wichtig ist
-	* Er hat genug Ein-/Ausgänge für ca. 10 Geräte
+* Ein Arduino Nano kostet unter 20€, teilweise sogar unter 10€
+* Er lässt sich mit der LEGO®-Technic-Batterie betreiben
+* Er startet (im Gegensatz z.B. zum Raspberry Pi) in unter einer Sekunde, ein Umstand, der in Modellen mit einschaltbarer Batterie wichtig ist
+* Er hat genug Ein-/Ausgänge für ca. 10 Geräte
 
 Die Programmierung erfolgt in C, was nicht so intuitiv ist, was man aber mit einer eigenen grafischen IDE (oder zumindest einer besseren API) kompensieren kann.
 
