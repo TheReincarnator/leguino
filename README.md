@@ -1,34 +1,53 @@
-# Disclaimer / Warnhinweis
+# Disclaimer and warning
 
 The instructions, images, schematics, source codes, etc. may not be accurate nor complete.
 Use at your own risk.
 
 LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
 
-Die Anleitungen, Bilder, Schematiken, Quellcodes etc. sind ggf. nicht akkurat oder nicht vollständig.
-Verwendung auf eigene Gefahr.
+# Introduction
 
-LEGO® ist ein Markenzeichen der LEGO Group, die weder diese Website sponsort, noch autorisiert oder unterstützt.
+[LEGO<sup>®</sup> Mindstorms](https://www.lego.com/de-de/mindstorms) is a wonderful platform to playfully get used to robotics and programming. Kids can complete their existing LEGO<sup>®</sup> collection with motors and sensors, and the graphical programming environment is easy to understand, but it also contains complex concepts like commands, iterations, branching, variables, and events.
 
-# Einleitung
+LEGO<sup>®</sup> Mindstorms is, on the other hand, not very cheap (especially for the inquisitive offspring). Though my son already had a rich collection of LEGO<sup>®</sup> Technic models with motors, lights, and switches, it lacks of sensors and even programming.
 
-LEGO® Mindstorms ist eine wunderbare Plattform, um sich spielerisch der Robotik und Programmierung zu nähern. Kinder können ihre vorhandene LEGO®-Sammlung um Motoren und Sensoren ergänzen, und die grafische Programmier-Umgebung ist auf der einen Seite leicht zu verstehen, auf der anderen Seite enthält es bereits Konzepte wie Befehle, Schleifen, Verzweigung, Variablen und Ereignisse.
+But he was very much interested in that stuff.
 
-LEGO® Mindstorms ist jedoch (vor allem für den wissbegierigen Nachwuchs) nicht ganz günstig. Mein Sohn hatte zwar mittlerweile bereits eine schöne Sammlung LEGO®-Technic-Modelle mit Motoren, Lichtern und Schaltern, aber ohne Sensoren oder gar Programmierung.
+So I thought, let's try to fill the gap and build an open-source platform based on LEGO<sup>®</sup> Technic, that is cheap enough (goal <100€) and also easy to understand. To do so, [Arduino](https://www.arduino.cc/) is the perfect choice, for the following reasons:
 
-Aber er hatte Interesse daran.
+* An Arduino Nano costs less than 20€, sometimes even below 10€.
+* You can power it with a regular LEGO<sup>®</sup> Technic battery.
+* It starts up in less than a second (in contrast to the [Raspberry Pi](https://www.raspberrypi.org/) for instance), a circumstance that is important when building models with a switchable battery.
+* It has enough inputs/outputs for about 10 devices.
 
-Also dachte ich mir: Versuchen wir mal die Lücke zu schließen und eine Open-Source-Plattform zu gründen, die auf LEGO®-Technic basiert, kostengünstig ist (Ziel <100€) und leicht verständlich. Hierfür schien Arduino bestens geeignet, aus folgenden Gründen:
+I added a programming platform, an API that abstracts from sensors, actors, control sequences etc., so the offspring (and you) can focus on the actual project.
 
-* Ein Arduino Nano kostet unter 20€, teilweise sogar unter 10€
-* Er lässt sich mit der LEGO®-Technic-Batterie betreiben
-* Er startet (im Gegensatz z.B. zum Raspberry Pi) in unter einer Sekunde, ein Umstand, der in Modellen mit einschaltbarer Batterie wichtig ist
-* Er hat genug Ein-/Ausgänge für ca. 10 Geräte
+If you want to learn more about how Leguino was invented, [visit my web site](http://www.thomasjacob.de/kreativ/leguino-en).
 
-Die Programmierung erfolgt in C, was nicht so intuitiv ist, was man aber mit einer eigenen grafischen IDE (oder zumindest einer besseren API) kompensieren kann.
+# Getting started
 
-# Mehr über das Projekt lesen
+Leguino is both a custom Arduino shield and wiring, as well as a library for Arduino. To get started, you need to build the shield yourself (sorry, no orderable ready-made PCB as of today), and then install the Arduino IDE, and the Leguino library.
 
-Wenn du zunächst mehr über diese Projekt lesen möchtest, besuche bitte [meine Website](http://www.thomasjacob.de/kreativ/leguino/).
+## Hardware
 
-Wenn du dann auch deinen eigenen Leguino-Brick bauen möchtest, findest du in "docs" und "examples" alle Ressourcen, die dir dabei helfen sollten.
+First of all, you require an Arduino Uno or Nano. I recommend the latter, as it fulfills the Leguino requirements and it has much smaller dimensions.
+
+As there is no Leguino PCB design as of today (maybe you'd like to contribute?), you need to buy an Arduino shield and all electronics parts, and solder them manually.
+
+You also need to make LEGO<sup>®</sup> Technic wires and the case.
+
+You can find all parts in the [parts list](docs/parts.md), as well as wiring and board schematics in [schematics folder](docs/schematics). I also took [some pictures](docs/photos) while building the prototype. Maybe my [my web site](http://www.thomasjacob.de/kreativ/leguino-en) helps, too.
+
+## Software
+
+To write your own Leguino program, you first need the Arduino IDE, which you can [download here].
+
+After installation, take this Leguino source folder, and put it into the libraries folder of your installation.
+
+Then, start your programs by using one of the example sketches found in [examples)(examples), and read the API of the [Leguino core](core/LeguinoCore.h), [its actors](actor/Actor.h), and [its sensors](sensor/Sensor.h).
+
+There is also a kids-friendly (but German) documentation available, [see here](docs/Leguino-Kurzanleitung-DE.doc).
+
+# Contribute
+
+Do you have suggestions, ideas, even code or PCB designs? Please contact me at http://thomasjacob.de/footer/contact.
