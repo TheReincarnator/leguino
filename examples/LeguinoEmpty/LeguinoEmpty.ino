@@ -1,166 +1,171 @@
 #include <Leguino.h>
 
 
-// ==================
-// ===  Sensoren  ===
-// ==================
-
-// Deklariere hier alle Sensoren (Anschluesse 1 bis 6)
-
-// Zum Beispiel wie folgt:
-//Switch * tasteRot;
-//Switch * tasteGelb;
-//LightSensor * helligkeit;
-//LightBarrier * muenzEinwurf;
-//DistanceSensor * entfernung;
-//SingleSensor * spannungsMessung;
-
-
 // =================
-// ===  Aktoren  ===
+// ===  Sensors  ===
 // =================
 
-// Deklariere hier alle Aktoren (LEGO-Technik-Anschluesse A bis E)
+// Declare all sensors here (jacks 1 to 6)
 
-// Zum Beispiel wie folgt:
-//Light * frontlicht;
-//Light * ruecklicht;
-//Tread * antrieb;
-//Motor * winde;
+// For example:
+//Switch * buttonRed;
+//Switch * buttonYellow;
+//LightSensor * brightness;
+//LightBarrier * coinSlot;
+//DistanceSensor * distance;
+//SingleSensor * voltageProbe;
 
 
-// =======================
-// ===  Hauptprogramm  ===
-// =======================
+// ================
+// ===  Aktors  ===
+// ================
+
+// Declare all actors here (jacks A to E)
+
+// For example:
+//Light * frontLight;
+//Light * backLight;
+//Tread * drive;
+//Motor * winch;
+
+
+// ======================
+// ===  Main program  ===
+// ======================
 
 void setup() {
-	// Leguino starten (entweder mit WAIT_FOR_PLAY oder NO_WAIT).
-	// Diese Zeile muss immer als erstes in der loop stehen.
+	// Start Leguino (either use WAIT_FOR_PLAY or NO_WAIT).
+	// This line must always be the first in the setup function.
 	leguino.setup(WAIT_FOR_PLAY);
 	
-	// -------------------------------------------------------------------------
-	// Initialisierungen. Hier das Programmieren, was nur einmal passieren soll.
-	// -------------------------------------------------------------------------
+	// -----------------------------------------------------------------------
+	// Initializations. Add code here for things that should happen once only.
+	// -----------------------------------------------------------------------
 	
 	// Sensoren anlegen und mit Anschluessen verbinden
-	//leguino.add(tasteRot = new Switch(IN_1));
-	//leguino.add(tasteGelb = new Switch(IN_2));
-	//leguino.add(helligkeit = new LightSensor(IN_3));
-	//leguino.add(muenzEinwurf = new LightBarrier(IN_4));
-	//leguino.add(entfernung = new DistanceSensor(IN_5));
-	//leguino.add(spannungsMessung = new SingleSensor(IN_6));
+	//leguino.add(buttonRed = new Switch(IN_1));
+	//leguino.add(buttonYellow = new Switch(IN_2));
+	//leguino.add(brightness = new LightSensor(IN_3));
+	//leguino.add(coinSlot = new LightBarrier(IN_4));
+	//leguino.add(distance = new DistanceSensor(IN_5));
+	//leguino.add(voltageProbe = new SingleSensor(IN_6));
 
 	// Aktoren anlegen und mit Anschluessen verbinden
 	// Achtung: Motoren und Antriebe funktionieren nur an A, B und C
-	//leguino.add(antrieb = new Tread(OUT_A, OUT_B));
-	//leguino.add(winde = new Motor(OUT_C));
-	//leguino.add(frontlicht = new Light(OUT_D));
-	//leguino.add(ruecklicht = new Light(OUT_E));
+	//leguino.add(drive = new Tread(OUT_A, OUT_B));
+	//leguino.add(winch = new Motor(OUT_C));
+	//leguino.add(frontLight = new Light(OUT_D));
+	//leguino.add(backLight = new Light(OUT_E));
 
 	// Sensoren ggf. einstellen und Aktoren voreinstellen
-	//muenzEinwurf->setThresholds(300, 600);
-	//frontlicht->on();
-	//ruecklicht->on();
+	//coinSlot->setThresholds(300, 600);
+	//frontLight->on();
+	//backLight->on();
 }
 
 void loop() {
-	// Leguino aktualisieren. Diese Zeile muss immer als erstes in der loop stehen.
+	// Update Leguino.
+	// This line must always be the first in the loop function.
 	leguino.update();
 
-	// ----------------------------------------------------------
-	// Endlosschleife. Hier Sensoren abfragen und Aktoren setzen.
-	// ----------------------------------------------------------
+	// -------------------------------------------
+	// Endless loop. Query sensors and set actors.
+	// -------------------------------------------
 	
-	// Beispiel für Switch (Abfrage)
-	//if (tasteRot->isOn())
+	// Example for a switch (query)
+	//if (buttonRed->isOn())
 	//{
 	//...
-	//tasteRot->waitOff();
+	//buttonRed->waitOff();
 	//}
 	
-	// Beispiel für Switch (Warten auf Einschalten)
-	//tasteRot->waitOn();
+	// Example for a switch (for until turned on)
+	//buttonRed->waitOn();
 	//...
-	//tasteRot->waitOff();
+	//buttonRed->waitOff();
 
-	// Beispiel für LightSensor (Abfrage, Werte sind 0 bis 1023)
-	//if (helligkeit->getBrightness() < 300)
-	//frontlicht->on();
+	// Example for a light sensor (query, values are 0 to 1023)
+	//if (brightness->getBrightness() < 300)
+	//frontLight->on();
 	//else
-	//frontlicht->off();
+	//frontLight->off();
 
-	// Beispiel für LightSensor (Warten auf heller als 500, max. 2 Sekunden)
-	//helligkeit->waitBrighter(500, 2000);
+	// Example for a light sensor (wait until brighter than 500, max. 2 seconds)
+	//brightness->waitBrighter(500, 2000);
 	//...
 
-	// Beispiel für LightBarrier (Abfrage)
-	//if (muenzEinwurf->isHit())
+	// Example for a light barrier (query)
+	//if (coinSlot->isHit())
 	//{
 	//...
-	//muenzEinwurf->waitClear();
+	//coinSlot->waitClear();
 	//}
 	
-	// Beispiel für LightBarrier (Warten auf Unterbrechung)
-	//muenzEinwurf->waitHit();
+	// Example for a light barrier (wait until hit)
+	//coinSlot->waitHit();
 	//...
-	//muenzEinwurf->waitClear();
+	//coinSlot->waitClear();
 
-	// Beispiel für DistanceSensor (Abfrage in cm oder mm, Werte 5cm bis 200cm bzw. 50mm bis 2000mm)
-	//if (entfernung->getDistanceCm() < 30)
+	// Example for a distance sensor (query cm or mm, values are 20 cm to 200 cm
+	// resp. 200 mm to 2000 mm)
+	//if (distance->getDistanceCm() < 30)
 	//{
 	//...
 	//}
 	
-	// Beispiel für DistanceSensor (Warten auf nahen Gegenstand <95mm, max. 5 Sekunden)
-	//entfernung->waitNearerMm(95, 5000);
+	// Example for a distance sensor (wait for an obstacle to get closer than
+	// 95 mm, max. 5 seconds)
+	//distance->waitNearerMm(95, 5000);
 	//...
 
-	// Beispiel für einen beliebigen Sensor (Raw-Werte)
-	// Raw-Values funktionieren bei jedem Sensor
-	//int16 value = spannungsMessung->getRawValue();
+	// Example for an arbitrary sensor like pots and probes (raw values)
+	// Note: Raw values and voltages work with any sensor
+	//uint16 voltage = voltageProbe->getVoltage();
 
-	// Raw-Value bei einem beliebigen Sensor auf dem Monitor ausgeben
-	//Serial.print("Wert der Lichtschranke: ");
-	//Serial.print(muenzEinwurf->getRawValue());
+	// Output raw value of an arbitrary sensor on the monitor
+	//Serial.print("Value of the light barrier: ");
+	//Serial.print(coinSlot->getRawValue());
 	//Serial.println();
 
-	// Einfache Beispiele für Light (Werte 0 bis 100)
-	//frontlicht->on();
-	//frontlicht->off();
-	//frontlicht->setValue(50);
+	// Simple example for light (value 0 to 100)
+	//frontLight->on();
+	//frontLight->off();
+	//frontLight->setValue(50);
 	
-	// Light nur für bestimmte Zeit einschalten (msecs)
-	//frontlicht->on(1000);
+	// Turn on light for a given time (msecs)
+	//frontLight->on(1000);
 
-	// Serial.print oder Serial.println kann man auch für Status-Meldungen nutzen
-	//Serial.println("Licht wird eingeschaltet");
-	//frontlicht->on();
+	// Note: You can use Serial.print or Serial.println for status messages
+	//Serial.println("Light gets turned on");
+	//frontLight->on();
 	
-	// Beispiele für Motor (Werte -100 bis 100)
-	//winde->on();
-	//winde->on(1000);
-	//winde->off();
-	//winde->reverse();
-	//winde->reverse(1000);
-	//winde->setValue(50);
-	//winde->setValue(50, 1000);
-	//winde->setValue(-50);
-	//winde->setValue(-50, 1000);
+	// Example for motors (values -100 to 100)
+	//winch->on();
+	//winch->on(1000);
+	//winch->off();
+	//winch->reverse();
+	//winch->reverse(1000);
+	//winch->setValue(50);
+	//winch->setValue(50, 1000);
+	//winch->setValue(-50);
+	//winch->setValue(-50, 1000);
 	
-	// Einfache Beispiele für Tread (mit Schub von 0 bis 100 Prozent)
-	//antrieb->moveStraight(100);
-	//antrieb->moveLeft(80);
-	//antrieb->moveRight(80);
-	//antrieb->stop();
-	//antrieb->turnAroundLeft(100);
-	//antrieb->turnAroundRight(100);
+	// Simple tread examples (thrust from 0 to 100 percent)
+	//drive->moveStraight(100);
+	//drive->moveLeft(80);
+	//drive->moveRight(80);
+	//drive->stop();
+	//drive->turnAroundLeft(100);
+	//drive->turnAroundRight(100);
 	
-	// Beliebige Richtungen von -100 (Drehung links), ueber 0 (geradeaus), bis 100 (Drehung rechts)
-	//antrieb->move(-50, 100);
+	// Arbitrary tread directions from -100 (turn around left on the spot),
+	// over 0 (straight), to 100 (turn around right on the spot).
+	//drive->move(-50, 100);
 
-	// Alle zusaetzlich auch noch mit Dauer, wenn gewuenscht
-	//antrieb->moveLeft(100, 1000);
+	// Add a duration to the tread move, if desired
+	//drive->moveLeft(100, 1000);
 
-	// Wenn man einfach nur mal warten möchte:
+	// To simply wait, use Leguino's delay function (keeps background tasks
+	// like sequences active).
 	//leguino.delay(1000);
 }

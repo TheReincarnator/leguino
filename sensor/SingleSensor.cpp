@@ -18,6 +18,11 @@ SingleSensor::SingleSensor(int8 input)
 	valueCache = -1;
 }
 
+uint16 SingleSensor::getMilliVolts()
+{
+	return (uint16) (getRawValue() / 1023.0 * 5000.0);
+}
+
 uint16 SingleSensor::getRawValue()
 {	
 	if (valueCache < 0)
