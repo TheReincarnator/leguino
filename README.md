@@ -5,6 +5,12 @@ Use at your own risk.
 
 LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
 
+**Attention**: Please note that there are two projects with the name "Leguino" out there:
+
+1. This open-source, free GitHub project, focussing on the creation of an Arduino shield to drive standard LEGO® Technic motors and lights. You can find more details on the history of the project in this readme, and at [Thomas Jacob's website](https://www.thomasjacob.de/kreativ/leguino-en). In this project, you take your existing LEGO® Technic models and bring them to life by programming against an Arduino API.
+
+2. A commercial project, started as a Kickstarter campaign, focussing on the creation of proprietary hardware bricks compatible to the geometry of LEGO®, with Arduino and Raspberry Pi programming. You can find more details on that project at [Leguino.com](http://leguino.com).
+
 # Introduction
 
 [LEGO<sup>®</sup> Mindstorms](https://www.lego.com/de-de/mindstorms) is a wonderful platform to playfully get used to robotics and programming. Kids can complete their existing LEGO<sup>®</sup> collection with motors and sensors, and the graphical programming environment is easy to understand, but it also contains complex concepts like commands, iterations, branching, variables, and events.
