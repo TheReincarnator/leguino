@@ -3,13 +3,14 @@
 The instructions, images, schematics, source codes, etc. may not be accurate nor complete.
 Use at your own risk.
 
-LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.
+LEGO<sup>®</sup> is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site.<br/>
+LEGUINO<sup>™</sup> is a trademark of Leguino Ltd., which is independent of this Leguino project.
 
 **Attention**: Please note that there are two projects with the name "Leguino" out there:
 
-1. This open-source, free GitHub project, focussing on the creation of an Arduino shield to drive standard LEGO® Technic motors and lights. You can find more details on the history of the project in this readme, and at [Thomas Jacob's website](https://www.thomasjacob.de/kreativ/leguino-en). In this project, you take your existing LEGO® Technic models and bring them to life by programming against an Arduino API.
+1. This open-source, free GitHub project, focussing on the creation of an Arduino shield to drive standard LEGO<sup>®</sup> Technic motors and lights. You can find more details on the history of the project in this readme, and at [Thomas Jacob's website](https://www.thomasjacob.de/kreativ/leguino-en). In this project, you take your existing LEGO<sup>®</sup> Technic models and bring them to life by programming against an Arduino API.
 
-2. A commercial project, started as a Kickstarter campaign, focussing on the creation of proprietary hardware bricks compatible to the geometry of LEGO®, with Arduino and Raspberry Pi programming. You can find more details on that project at [Leguino.com](http://leguino.com).
+2. A commercial project, started as a Kickstarter campaign, focussing on the creation of proprietary hardware bricks compatible to the geometry of LEGO<sup>®</sup>, with Arduino and Raspberry Pi programming. You can find more details on that project at [Leguino.com](http://leguino.com).
 
 # Introduction
 
