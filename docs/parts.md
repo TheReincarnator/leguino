@@ -4,11 +4,10 @@
 
 * Prototype Shield
 * Header Pin set
-* 5x 10k resistor
-* Mini fuse 1A, 250V ([Conrad #524335](http://www.conrad.de/ce/de/product/524335))
+* 5x 100k resistor
 * 3x bistable Print relay TQ2L25, 1A, 2x switch UK Panasonic bistable 5V 2x switch, 1A 110V DC (125V AV) 30W (62,5 VA) ([Conrad #505062](http://www.conrad.de/ce/de/product/505062))
 * 5x FQP30N06L MOSFET N-Channel
-* Switching regulator W78-5V0, vertical, output 5V, 1A, input 7-34V ([Conrad #167805](http://www.conrad.de/ce/de/product/167805))
+* Switching regulator, output 5V/1A, input 9V (e.g. [EzSBC PSU2-5](https://www.ezsbc.com/index.php/psu2-5.html) or [Conrad #167805, W78-5V0](http://www.conrad.de/ce/de/product/167805))
 * Diode 1N4001 ([Conrad #162213](http://www.conrad.de/ce/de/product/162213))
 * Play button MS-402/SW
 * Reset button MS-402/RT
