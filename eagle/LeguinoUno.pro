@@ -1,27 +1,25 @@
 EAGLE AutoRouter Statistics:
 
-Job           : E:/Work/Arduino/libraries/Leguino/docs/schematics/eagle/LeguinoNano.brd
+Job           : E:/Work/Arduino/libraries/Leguino/eagle/LeguinoUno.brd
 
-Start at      : 19:12:53 (04.02.2018)
-End at        : 19:13:45 (04.02.2018)
-Elapsed time  : 00:00:50
+Start at      : 22:51:42 (29.05.2018)
+End at        : 22:52:16 (29.05.2018)
+Elapsed time  : 00:00:33
 
-Signals       :    32   RoutingGrid: 5 mil  Layers: 2
+Signals       :    32   RoutingGrid: 6.25 mil  Layers: 2
 Connections   :    89   predefined:  0 ( 0 Vias )
 
-Router memory :   1219564
+Router memory :   786916
 
-Job has been interrupted!
+Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Passname          : TopRouter     Route
+Time per pass     :  00:00:28  00:00:01  00:00:01  00:00:02  00:00:01
+Number of Ripups  :       190         0         0         0         0
+max. Level        :         5         0         0         0         0
+max. Total        :        35         0         0         0         0
 
-Time per pass     :  00:00:18  00:00:32
-Number of Ripups  :         0        21
-max. Level        :         0         3
-max. Total        :         0        28
+Routed            :        89        89        89        89        89
+Vias              :        69        50        48        48        46
+Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
-Routed            :        38        79
-Vias              :         0        36
-Resolution        :    42.7 %    88.8 %
-
-Final             : abgebrochen
+Final             : 100.0% beendet
