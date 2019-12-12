@@ -10,10 +10,10 @@ DistanceSensor::DistanceSensor(int8 input)
 void DistanceSensor::calibrate(uint16 minimumRawValue, uint16 maximumRawValue,
 	uint16 mmPerRawInverse, int16 mmOffset)
 {
-	this.minimumRawValue = minimumRawValue;
-	this.maximumRawValue = maximumRawValue;
-	this.mmPerRawInverse = mmPerRawInverse;
-	this.mmOffset = mmOffset;
+	this->minimumRawValue = minimumRawValue;
+	this->maximumRawValue = maximumRawValue;
+	this->mmPerRawInverse = mmPerRawInverse;
+	this->mmOffset = mmOffset;
 }
 
 int16 DistanceSensor::getDistanceCm()
@@ -25,9 +25,9 @@ int16 DistanceSensor::getDistanceMm()
 {
 	uint16 rawValue = getRawValue();
 	if (rawValue < minimumRawValue)
-		rawValue minimumRawValue;
+		rawValue = minimumRawValue;
 	if (rawValue > maximumRawValue)
-		rawValue maximumRawValue;
+		rawValue = maximumRawValue;
 
 	return (int16) (mmPerRawInverse / rawValue + mmOffset);
 }

@@ -2,13 +2,13 @@ SingleSensor::SingleSensor(int8 input)
 {
 	switch (input)
 	{
-		case IN_1: pin = A2; analogPin = 2; break;
-		case IN_2: pin = A3; analogPin = 3; break;
-		case IN_3: pin = A4; analogPin = 4; break;
-		case IN_4: pin = A5; analogPin = 5; break;
-		case IN_5: pin = A6; analogPin = 6; break;
-		case IN_6: pin = A7; analogPin = 7; break;
-	
+		case IN_1: pin = A0; analogPin = 0; break;
+		case IN_2: pin = A1; analogPin = 1; break;
+		case IN_3: pin = A2; analogPin = 2; break;
+		case IN_4: pin = A3; analogPin = 3; break;
+		case IN_5: pin = A4; analogPin = 4; break;
+		case IN_6: pin = A5; analogPin = 5; break;
+
 		default: pin = -1; analogPin = -1;
 	}
 
@@ -24,10 +24,10 @@ uint16 SingleSensor::getMilliVolts()
 }
 
 uint16 SingleSensor::getRawValue()
-{	
+{
 	if (valueCache < 0)
 		valueCache = (int16) analogRead(analogPin);
-	
+
 	return valueCache;
 }
 
@@ -52,9 +52,9 @@ bool SingleSensor::waitUntilRaw(char comparator, int16 value, uint16 timeout)
 			|| comparator == 'L' && getRawValue() <= value
 			|| comparator == '!' && getRawValue() != value)
 			return true;
-		
+
 		current = millis();
 	}
-	
+
 	return false;
 }
