@@ -2,6 +2,11 @@
 #define __LEGUINO_SINGLEACTOR_H
 
 
+#define _SWITCHTIME_HIGH_NOTREADY 5
+#define _SWITCHTIME_HIGH_READY 50
+#define _SWITCHTIME_LOW 1
+
+
 /**
  * A Leguino actor that requires exactly one output jack (e.g. lights,
  * simple motors).
@@ -13,7 +18,7 @@
 class SingleActor : public Actor
 {
 	public:
-	
+
 		/**
 		 * Creates a new single actor.
 		 * @param output The output the actor is connected to.

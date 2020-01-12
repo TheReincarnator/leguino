@@ -7,7 +7,7 @@ SingleActor::SingleActor(int8 output)
 		case OUT_C: powerPin = 6; forwardPin = 2; backwardPin = 8; break;
 		case OUT_D: powerPin = 10; forwardPin = -1; backwardPin = -1; break;
 		case OUT_E: powerPin = 11; forwardPin = -1; backwardPin = -1; break;
-	
+
 		default: powerPin = -1; forwardPin = -1; backwardPin = -1;
 	}
 
@@ -82,7 +82,7 @@ void SingleActor::switchDirection(int8 value)
 
 	if (value != 0 && backwardPin >= 0)
 		digitalWrite(backwardPin, !offValue);
-	
+
 	if (value > 0) direction = 1;
 	if (value < 0) direction = -1;
 }
@@ -102,7 +102,6 @@ void SingleActor::updateSequence(uint16 timeStep)
 	{
 		if (sequenceStepRemaining <= timeStep)
 		{
-
 			timeStep -= sequenceStepRemaining;
 			sequenceStepStartValue = sequenceStep < 0 ? requestedValue : sequence->getValue(sequenceStep);
 			sequenceStep++;

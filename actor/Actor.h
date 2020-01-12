@@ -27,10 +27,6 @@
  */
 #define OUT_E 'E'
 
-#define _SWITCHTIME_HIGH_NOTREADY 5
-#define _SWITCHTIME_HIGH_READY 50
-#define _SWITCHTIME_LOW 1
-
 
 /**
  * <p>
